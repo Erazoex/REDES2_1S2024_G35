@@ -1,3 +1,10 @@
+| Nombre    | Carnet   |
+|-----------|----------|
+|Esdras Rodolfo Toc Hi|201807373|
+|Brian Josue Erazo Sagastume|201807253|
+|           |          |
+
+
 # CONFIGURACION DE LOS SWITCHES Y PCS
 # SWITCH 1
 ```
@@ -26,6 +33,12 @@ switchport trunk allowed vlan 18,28,38
 exit
 do write
 do show interfaces trunk
+exit
+int range f0/1 - 2
+switchport nonegotiate
+int range f0/7 - 9
+switchport nonegotiate
+do write
 exit
 ```
 
@@ -57,6 +70,12 @@ exit
 do write
 do show interfaces trunk
 exit
+int range f0/1 - 2
+switchport nonegotiate
+int range f0/9 - 11
+switchport nonegotiate
+do write
+exit
 ```
 
 # SWITCH 3
@@ -86,6 +105,12 @@ switchport trunk allowed vlan 18,28,38
 exit
 do write
 do show interfaces trunk
+exit
+int range f0/1 - 4
+switchport nonegotiate
+int f0/11
+switchport nonegotiate
+do write
 exit
 ```
 
@@ -121,6 +146,14 @@ exit
 do write
 do show interfaces trunk
 exit
+int range f0/5 - 7
+switchport nonegotiate
+int f0/2
+switchport nonegotiate
+int f0/10
+switchport nonegotiate
+do write
+exit
 ```
 
 # SWITCH 5
@@ -151,6 +184,12 @@ exit
 do write
 do show interfaces trunk
 exit
+int range f0/1 - 4
+switchport nonegotiate
+int f0/7
+switchport nonegotiate
+do write
+exit
 ```
 
 # SWITCH 6
@@ -180,6 +219,12 @@ switchport trunk allowed vlan 18,28,38
 exit
 do write
 do show interfaces trunk
+exit
+int f0/2
+switchport nonegotiate
+int range f0/5 - 8
+switchport nonegotiate
+do write
 exit
 ```
 
@@ -216,6 +261,12 @@ conf t
 int range f0/23 - 24
 switchport mode access
 switchport access vlan 18
+do write
+exit
+int f0/2
+switchport nonegotiate
+int f0/5
+switchport nonegotiate
 do write
 exit
 ```
@@ -255,6 +306,20 @@ switchport mode access
 switchport access vlan 28
 do write
 exit
+int f0/24
+switchport port-security
+switchport mode access
+switchport port-security mac-address 0040.0B70.7964
+switchport port-security violation shutdown 
+switchport port-security
+exit
+do write
+int f0/3
+switchport nonegotiate
+int f0/6
+switchport nonegotiate
+do write
+exit
 ```
 
 # SWITCH 9
@@ -290,6 +355,12 @@ conf t
 int range f0/23 - 24
 switchport mode access
 switchport access vlan 38
+do write
+exit
+int f0/4
+switchport nonegotiate
+int f0/7
+switchport nonegotiate
 do write
 exit
 ```
@@ -334,7 +405,7 @@ do show interfaces trunk
 exit
 enable
 conf t
-int f0/24
+int range f0/23 - 24
 switchport mode access
 switchport access vlan 38
 do write
@@ -347,6 +418,12 @@ ip address 192.168.28.1 255.255.255.0
 exit
 int vlan 38
 ip address 192.168.38.1 255.255.255.0
+exit
+int f0/2
+switchport nonegotiate
+int f0/5
+switchport nonegotiate
+do write
 exit
 ```
 
@@ -385,6 +462,20 @@ switchport mode access
 switchport access vlan 28
 do write
 exit
+int f0/24
+switchport port-security
+switchport mode access
+switchport port-security mac-address 0002.1615.A264
+switchport port-security violation shutdown 
+switchport port-security
+exit
+do write
+int f0/3
+switchport nonegotiate
+int f0/6
+switchport nonegotiate
+do write
+exit
 ```
 
 # SWITCH 12
@@ -420,6 +511,12 @@ conf t
 int range f0/23 - 24
 switchport mode access
 switchport access vlan 18
+do write
+exit
+int f0/4
+switchport nonegotiate
+int f0/7
+switchport nonegotiate
 do write
 exit
 ```
