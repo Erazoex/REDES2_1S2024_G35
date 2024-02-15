@@ -6,7 +6,7 @@
 
 
 # CONFIGURACION DE LOS SWITCHES Y PCS
-![Topologia](Capuras/Topologia.jpg)
+![Topologia](Capturas/Topologia.jpg)
 # SWITCH 1
 ```
 enable
