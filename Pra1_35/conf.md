@@ -539,3 +539,12 @@ write memory
 192.168.38.3
 192.168.38.4
 192.168.38.5
+## Eleccion de escenario 
+| Escenario | Protocolo Spannig-Tree | Red Primaria | Red Básicos | Red Diversifico |
+|-----------|-----------|-----------|-----------|-----------|
+| 1 | PVST | 43 | 50 | 50 |
+| 2 | Rapid PVST | 49 | 33 | 50 |
+
+## Nuestra propuesta final 
+El protocolo PVST tiene un promedio de 47 s   
+El protocolo Rapid PVST tiene un promedio de 44 s
