@@ -542,8 +542,8 @@ write memory
 ## Eleccion de escenario 
 | Escenario | Protocolo Spannig-Tree | Red Primaria | Red Básicos | Red Diversifico |
 |-----------|-----------|-----------|-----------|-----------|
-| 1 | PVST | 43 | 50 | 50 |
-| 2 | Rapid PVST | 49 | 33 | 50 |
+| 1 | PVST | 43 s | 50 s | 50 s |
+| 2 | Rapid PVST | 49 s | 33 s | 50 s |
 
 ## Nuestra propuesta final 
 El protocolo PVST tiene un promedio de 47 s   
