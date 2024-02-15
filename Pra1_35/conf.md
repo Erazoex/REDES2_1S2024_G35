@@ -2,10 +2,11 @@
 |-----------|----------|
 |Esdras Rodolfo Toc Hi|201807373|
 |Brian Josue Erazo Sagastume|201807253|
-|           |          |
+|Brayan Alexander Mejia Barrientos|201900576|
 
 
 # CONFIGURACION DE LOS SWITCHES Y PCS
+![Topologia](Capuras/Topologia.jpg)
 # SWITCH 1
 ```
 enable
