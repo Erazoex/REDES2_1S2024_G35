@@ -540,12 +540,21 @@ write memory
 192.168.38.4
 192.168.38.5
 ## Eleccion de escenario 
+Se ralizaron pruebas con pvst y con rapid pvst.
+Para pvst tenemos la siguiente linea de comandos
+
+![Topologia](Capturas/Rapid_0.jpg)  
+
+Para rapid-pvst tenemos las siguientes lineas de comandos
+![Topologia](Capturas/Rapid_1.jpg)
+
+Donde se cronometraron los tiempos y se obtuvieron los siguientes valores para cada una de las configuraciones:  
+
 | Escenario | Protocolo Spannig-Tree | Red Primaria | Red Básicos | Red Diversifico |
 |-----------|-----------|-----------|-----------|-----------|
 | 1 | PVST | 43 s | 50 s | 50 s |
 | 2 | Rapid PVST | 49 s | 33 s | 50 s |
 
 ## Nuestra propuesta final 
-El protocolo PVST tiene un promedio de 47 s   
-El protocolo Rapid PVST tiene un promedio de 44 s  
-En termios de recuperacion el protocolo PVST tiende a ser un 3s mas rapido al momento de tener que recuperarse en caso de una falla o una desconexion 
+El protocolo PVST en estas mediciones tiene un promedio de 47 s, por otro lado el protocolo Rapid PVST tiene un promedio de 44 s  
+En termios de recuperacion el protocolo rapid PVST tiende a ser un 3s mas rapido al momento de tener que recuperarse en caso de una falla o una desconexion en nuestra red al ser una mejora patentada del model PVST se esperaba que este fuera mas rapido que el pvst normal, este protocolo ademas de ser mas rapido utilizar algoritmos que hacen mas eficiente el tiempo de convergencia, mantiene la compatibilidad con PVST y permite la coesixtencia dentro de las redes.
