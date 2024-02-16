@@ -547,4 +547,5 @@ write memory
 
 ## Nuestra propuesta final 
 El protocolo PVST tiene un promedio de 47 s   
-El protocolo Rapid PVST tiene un promedio de 44 s
+El protocolo Rapid PVST tiene un promedio de 44 s  
+En termios de recuperacion el protocolo PVST tiende a ser un 3s mas rapido al momento de tener que recuperarse en caso de una falla o una desconexion 
