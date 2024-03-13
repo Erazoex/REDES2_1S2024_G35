@@ -1,3 +1,40 @@
+Universidad de San Carlos de Guetamala  
+Facultad de Ingenieria  
+Escuela de Ciencias y Sistemas  
+Redes de computadoras 2  
+
+| Nombre    | Carnet   |
+| --------- | -------- |
+| Esdras Toc     | 123456   |
+| Brian Erazo    | 789012   |
+| Brayan Mejia   | 201900576   |
+
+
+#Tipologia
+![Topologia](Capturas/Topologia.jpg)
+
+# VLANS
+| VLAN | NUMERO  |
+| --------- | --------- |
+| VLAN A    |           |
+| VLAN B    |           |
+| VLAN C    |           |
+| VLAN D    |           |
+
+
+# DIRECCION IP PC
+
+| Departamento | Direccion IP | Mascara |
+| --------- | --------- | --------- |
+| CORPORATIVO    | 192.168.72.3    | 255.255.255.0    |
+| CORPORATIVO    | 192.168.72.2    | 255.255.255.0    |
+| SOPORTE    | 192.168.82.2    | 255.255.255.0    |
+| RRHH    | 192.168.13.2    | 255.255.255.0    |
+| RRHH   | 192.168.13.3    | 255.255.255.0   |
+| RRHH    | 192.168.13.4    | 255.255.255.0   |
+
+
+
 # CONFIGURACION PARA EIGRP
 
 ## Para el switch 4
