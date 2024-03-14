@@ -34,10 +34,37 @@ Redes de computadoras 2
 | RRHH    | 192.168.13.4    | 255.255.255.0   |
 
 
+# CONFIGURACION DE VLAN 68
+
+## Para el switch 1
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+
+int vlan 68
+ip address 192.168.68.1 255.255.255.0
+no shut
+exit
+```
+
+## Para el switch 3
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+
+int vlan 68
+ip address 192.168.68.1 255.255.255.0
+no shut
+exit
+```
 
 # CONFIGURACION PARA EIGRP
 
-## Para el switch 4
+## Para el MSW4
 ```
 enable
 conf t
@@ -64,7 +91,7 @@ exit
 do write
 ```
 
-## Para el switch 1
+## Para el MSW1
 ```
 enable
 conf t
