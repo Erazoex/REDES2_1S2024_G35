@@ -113,56 +113,57 @@ do write
 
 ## Para el MSW4
 
-enable
-conf t
+enable  
+conf t  
 
-vlan 68
-name CORPORATIVO68
-exit
-vlan 28
-name DISTRIBUCIÓN28
-exit
-vlan 18
-name VENTAS18
-exit
+vlan 68  
+name CORPORATIVO68  
+exit  
+vlan 28  
+name DISTRIBUCIÓN28  
+exit  
+vlan 18  
+name VENTAS18  
+exit  
 
-interface FastEthernet0/4
-no switchport
-ip address 2.0.0.1 255.255.255.0
-no shutdown
-exit
+interface FastEthernet0/4  
+no switchport  
+ip address 2.0.0.1 255.255.255.0  
+no shutdown  
+exit  
 
-router ospf 1
-network 2.0.0.0 0.0.0.255 area 0
-exit
-do write
+router ospf 1  
+network 2.0.0.0 0.0.0.255 area 0  
+exit  
+do write  
 
 
 ## Para el MSW7
 
-enable
-conf t
+enable  
+conf t  
 
-vlan 68
-name CORPORATIVO68
-exit
-vlan 28
-name DISTRIBUCIÓN28
-exit
-vlan 18
-name VENTAS18
-exit
+vlan 68  
+name CORPORATIVO68  
+exit  
+vlan 28  
+name DISTRIBUCIÓN28  
+exit  
+vlan 18  
+name VENTAS18  
+exit  
 
-interface FastEthernet0/4
-no switchport
-ip address 2.0.0.2 255.255.255.0
-no shutdown
-exit
+interface FastEthernet0/4  
+no switchport  
+ip address 2.0.0.2 255.255.255.0  
+no shutdown  
+exit  
 
-router ospf 1
-network 2.0.0.0 0.0.0.255 area 0
-exit
-do write
+ip routing  
+router ospf 1  
+network 2.0.0.0 0.0.0.255 area 0  
+exit  
+do write  
 
 
 
