@@ -33,10 +33,9 @@ Redes de computadoras 2
 | RRHH   | 192.168.13.3    | 255.255.255.0   |
 | RRHH    | 192.168.13.4    | 255.255.255.0   |
 
+# CONFIGURACION LADO IZQUIERDO
 
-# CONFIGURACION DE VLAN 68
-
-## Para el switch 1
+## SW1
 ```
 en
 conf t
@@ -47,9 +46,44 @@ int vlan 68
 ip address 192.168.68.1 255.255.255.0
 no shut
 exit
+
+interface range FastEthernet0/1 - 2
+channel-group 1 mode active
+
 ```
 
-## Para el switch 2
+## MSW1
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+exit
+vlan 18
+name VENTAS18
+exit
+
+int vlan 68
+ip address 192.168.68.1 255.255.255.0
+no shut
+exit
+
+ip routing
+interface vlan 18
+ip address 1.0.0.2 255.0.0.0
+no shutdown
+exit
+
+router eigrp 1
+network 1.0.0.0
+exit
+do write
+
+```
+
+# CONFIGURACION CENTRO
+
+## SW2
 ```
 en
 conf t
@@ -60,38 +94,10 @@ int vlan 68
 ip address 192.168.78.1 255.255.255.0
 no shut
 exit
-```
-
-## Para el switch 3
-```
-en
-conf t
-vlan 68
-name CORPORATIVO68
-
-int vlan 68
-ip address 192.168.88.1 255.255.255.0
-no shut
-exit
-```
-
-## Para el MSW1
-```
-en
-conf t
-vlan 68
-name CORPORATIVO68
-
-int vlan 68
-ip address 192.168.68.1 255.255.255.0
-no shut
-exit
 
 ```
 
-# CONFIGURACION PARA EIGRP
-
-## Para el MSW4
+## MSW4
 ```
 enable
 conf t
@@ -116,23 +122,36 @@ router eigrp 1
 network 1.0.0.0
 exit
 do write
+
 ```
 
-## Para el MSW1
+
+# CONFIGURACION LADO DERECHO
+
+## SW3
 ```
-enable
+en
 conf t
+vlan 68
+name CORPORATIVO68
 
-ip routing
-interface vlan 18
-ip address 1.0.0.2 255.0.0.0
-no shutdown
+int vlan 68
+ip address 192.168.88.1 255.255.255.0
+no shut
 exit
+```
 
-router eigrp 1
-network 1.0.0.0
+## MSW7
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+
+int vlan 68
+ip address 192.168.68.1 255.255.255.0
+no shut
 exit
-do write
 
 ```
 
