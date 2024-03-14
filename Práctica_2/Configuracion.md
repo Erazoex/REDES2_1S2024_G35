@@ -49,6 +49,19 @@ no shut
 exit
 ```
 
+## Para el switch 2
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+
+int vlan 68
+ip address 192.168.78.1 255.255.255.0
+no shut
+exit
+```
+
 ## Para el switch 3
 ```
 en
@@ -57,7 +70,7 @@ vlan 68
 name CORPORATIVO68
 
 int vlan 68
-ip address 192.168.68.1 255.255.255.0
+ip address 192.168.88.1 255.255.255.0
 no shut
 exit
 ```
