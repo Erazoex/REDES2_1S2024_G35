@@ -132,6 +132,7 @@ ip address 2.0.0.2 255.255.255.0
 no shutdown
 exit
 
+ip routing
 router ospf 1
 network 2.0.0.0 0.0.0.255 area 0
 exit
