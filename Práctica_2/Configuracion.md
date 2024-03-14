@@ -75,6 +75,20 @@ no shut
 exit
 ```
 
+## Para el MSW1
+```
+en
+conf t
+vlan 68
+name CORPORATIVO68
+
+int vlan 68
+ip address 192.168.68.1 255.255.255.0
+no shut
+exit
+
+```
+
 # CONFIGURACION PARA EIGRP
 
 ## Para el MSW4
