@@ -5,9 +5,9 @@ Redes de computadoras 2
 
 | Nombre    | Carnet   |
 | --------- | -------- |
-| Esdras Toc     | 123456   |
-| Brian Erazo    | 789012   |
-| Brayan Mejia   | 201900576   |
+| Esdras Toc     | 201807373 |
+| Brian Erazo    | 201807253 |
+| Brayan Mejia   | 201900576 |
 
 
 #Tipologia
@@ -42,18 +42,18 @@ Redes de computadoras 2
 enable
 conf t
 
-vlan 60
+vlan 68
 name CORPORATIVO68
 exit
-vlan 20
+vlan 28
 name DISTRIBUCIÓN28
 exit
-vlan 10
+vlan 18
 name VENTAS18
 exit
 
 ip routing
-interface vlan 10
+interface vlan 18
 ip address 1.0.0.1 255.0.0.0
 no shutdown
 exit
@@ -70,7 +70,7 @@ enable
 conf t
 
 ip routing
-interface vlan 10
+interface vlan 18
 ip address 1.0.0.2 255.0.0.0
 no shutdown
 exit
@@ -89,13 +89,13 @@ do write
 enable
 conf t
 
-vlan 60
+vlan 68
 name CORPORATIVO68
 exit
-vlan 20
+vlan 28
 name DISTRIBUCIÓN28
 exit
-vlan 10
+vlan 18
 name VENTAS18
 exit
 
@@ -116,13 +116,13 @@ do write
 enable
 conf t
 
-vlan 60
+vlan 68
 name CORPORATIVO68
 exit
-vlan 20
+vlan 28
 name DISTRIBUCIÓN28
 exit
-vlan 10
+vlan 18
 name VENTAS18
 exit
 
