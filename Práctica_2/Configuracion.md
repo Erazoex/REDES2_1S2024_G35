@@ -26,12 +26,12 @@ Redes de computadoras 2
 
 | Departamento | Direccion IP | Mascara |
 | --------- | --------- | --------- |
-| CORPORATIVO    | 192.168.72.3    | 255.255.255.0    |
-| CORPORATIVO    | 192.168.72.2    | 255.255.255.0    |
-| SOPORTE    | 192.168.82.2    | 255.255.255.0    |
-| RRHH    | 192.168.13.2    | 255.255.255.0    |
-| RRHH   | 192.168.13.3    | 255.255.255.0   |
-| RRHH    | 192.168.13.4    | 255.255.255.0   |
+| CORPORATIVO    | 192.168.88.3    | 255.255.255.0    |
+| CORPORATIVO    | 192.168.88.2    | 255.255.255.0    |
+| SOPORTE    | 192.168.78.2    | 255.255.255.0    |
+| RRHH    | 192.168.68.2    | 255.255.255.0    |
+| RRHH   | 192.168.68.3    | 255.255.255.0   |
+| RRHH    | 192.168.68.4    | 255.255.255.0   |
 
 # CONFIGURACION LADO IZQUIERDO
 
@@ -81,6 +81,39 @@ do write
 
 ```
 
+## Configuracion  SW1 - MSW1
+
+### Configuracion SW1
+
+```
+enable
+configure terminal
+interface range FastEthernet0/1 - 2
+channel-group 1 mode active
+
+```
+
+### Configuracion MSW1 LACP
+```
+
+enable
+configure terminal
+interface range FastEthernet0/1 - 2  
+channel-group 1 mode active 
+
+
+```
+
+En ambos switches debemos de crear el enlace con Ethernetchanel con el mismo numero que se espesifico en los comandos anteriores  
+
+```
+
+interface Port-channel 1
+
+```
+En ambos switches, puedes verificar la configuración y el estado del grupo EtherChannel con comandos como show etherchannel summary o show etherchannel port-channel. 
+
+
 # CONFIGURACION CENTRO
 
 ## SW2
@@ -124,6 +157,41 @@ exit
 do write
 
 ```
+
+## Configuracion  SW2 - MSW4 LACP
+
+### Configuracion SW2
+
+```
+enable
+configure terminal
+interface range FastEthernet0/1 - 2
+channel-group 3 mode active
+
+
+```
+
+### Configuracion MSW4
+```
+
+enable
+configure terminal
+interface range FastEthernet0/1 - 2
+channel-group 3 mode active
+
+
+
+```
+
+En ambos switches debemos de crear el enlace con Ethernetchanel con el mismo numero que se espesifico en los comandos anteriores  
+
+```
+
+interface Port-channel 3
+
+
+```
+En ambos switches, puedes verificar la configuración y el estado del grupo EtherChannel con comandos como show etherchannel summary o show etherchannel port-channel. 
 
 
 # CONFIGURACION LADO DERECHO
@@ -213,44 +281,7 @@ do write
 
 
 
-
-
-# CONFIGURACION LACP 
-
-## Configuracion  SW1 - MSW1
-
-### Configuracion SW1
-
-```
-enable
-configure terminal
-interface range FastEthernet0/1 - 2
-channel-group 1 mode active
-
-```
-
-### Configuracion MSW1
-```
-
-enable
-configure terminal
-interface range FastEthernet0/1 - 2  
-channel-group 1 mode active 
-
-
-```
-
-En ambos switches debemos de crear el enlace con Ethernetchanel con el mismo numero que se espesifico en los comandos anteriores  
-
-```
-
-interface Port-channel 1
-
-```
-En ambos switches, puedes verificar la configuración y el estado del grupo EtherChannel con comandos como show etherchannel summary o show etherchannel port-channel. 
-
-
-## Configuracion  SW3 - MSW7
+## Configuracion  SW3 - MSW7 LACP
 
 ### Configuracion SW3
 
@@ -287,37 +318,4 @@ En ambos switches, puedes verificar la configuración y el estado del grupo Ethe
 
 
 
-## Configuracion  SW2 - MSW4
 
-### Configuracion SW2
-
-```
-enable
-configure terminal
-interface range FastEthernet0/1 - 2
-channel-group 3 mode active
-
-
-```
-
-### Configuracion MSW4
-```
-
-enable
-configure terminal
-interface range FastEthernet0/1 - 2
-channel-group 3 mode active
-
-
-
-```
-
-En ambos switches debemos de crear el enlace con Ethernetchanel con el mismo numero que se espesifico en los comandos anteriores  
-
-```
-
-interface Port-channel 3
-
-
-```
-En ambos switches, puedes verificar la configuración y el estado del grupo EtherChannel con comandos como show etherchannel summary o show etherchannel port-channel. 
