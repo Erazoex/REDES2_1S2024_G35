@@ -10,7 +10,7 @@ Redes de computadoras 2
 | Brayan Mejia   | 201900576 |
 
 
-#Tipologia
+# Tipologia
 ![Topologia](Capturas/Topologia.jpg)
 
 # VLANS
@@ -33,20 +33,6 @@ Redes de computadoras 2
 | RRHH   | 192.168.68.3    | 255.255.255.0   |
 | RRHH    | 192.168.68.4    | 255.255.255.0   |
 
-# IP DE LAS PC
-
-! PC0
-ip address 192.168.68.10
-! PC1
-ip address 192.168.68.20
-! PC2
-ip address 192.168.68.30
-! PC3
-ip address 192.168.88.10
-! PC4
-ip address 192.168.88.20
-! PC5
-ip address 192.168.78.10
 
 
 #VLANS 
