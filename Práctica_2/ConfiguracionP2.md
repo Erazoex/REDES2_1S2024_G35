@@ -43,7 +43,7 @@ DISTRIBUCION28
 enable
 configure terminal
 no ip domain lookup
-hostname SW0
+hostname SW1
 
 vlan 68
 name corporativo
@@ -78,7 +78,7 @@ end
 enable
 configure terminal
 no ip domain lookup
-hostname SW1
+hostname SW2
 
 vlan 68
 name corporativo
@@ -112,7 +112,7 @@ end
 enable
 configure terminal
 no ip domain lookup
-hostname SW2
+hostname SW3
 
 vlan 68
 name corporativo
@@ -140,7 +140,7 @@ end
 
 ```
 
-# MLSW1
+# MSW1
 
 ```
 enable
@@ -153,7 +153,7 @@ vlan 18
 name ventas
 exit
 
-hostname MLSW0
+hostname MSW1
 
 interface range fa0/1-2
 no shutdown
@@ -188,7 +188,7 @@ end
 
 ```
 
-# MLSW4
+# MSW4
 ```
 enable
 configure terminal
@@ -202,7 +202,7 @@ vlan 28
 name distribucion
 exit
 
-hostname MLSW1
+hostname MSW4
 
 interface range fa0/1-2
 no shutdown
@@ -252,7 +252,7 @@ end
 ```
 
 
-# MLSW7
+# MSW7
 
 
 ```
@@ -267,7 +267,7 @@ vlan 28
 name distribucion
 exit
 
-hostname MLSW2
+hostname MSW7
 
 interface range fa0/1-2
 no shutdown
@@ -300,4 +300,4 @@ exit
 do write
 end
 ```
-```
+
