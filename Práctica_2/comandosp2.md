@@ -30,10 +30,6 @@ hostname SW0
 
 vlan 68
 name corporativo
-vlan 18
-name ventas
-vlan 28
-name distribucion
 exit
 
 interface range fa0/1-3
@@ -49,7 +45,7 @@ exit
 
 interface po1
 switchport mode trunk
-switchport trunk allowed vlan 68,18,28
+switchport trunk allowed vlan 68
 exit
 
 do write
@@ -69,10 +65,6 @@ hostname SW1
 
 vlan 68
 name corporativo
-vlan 18
-name ventas
-vlan 28
-name distribucion
 exit
 
 interface fa0/1
@@ -88,7 +80,7 @@ exit
 
 interface po2
 switchport mode trunk
-switchport trunk allowed vlan 68,18,28
+switchport trunk allowed vlan 68
 exit
 
 do write
@@ -107,10 +99,6 @@ hostname SW2
 
 vlan 68
 name corporativo
-vlan 18
-name ventas
-vlan 28
-name distribucion
 exit
 
 interface range fa0/1-2
@@ -126,7 +114,7 @@ exit
 
 interface po3
 switchport mode trunk
-switchport trunk allowed vlan 68,18,28
+switchport trunk allowed vlan 68
 exit
 
 do write
@@ -146,8 +134,6 @@ vlan 68
 name corporativo
 vlan 18
 name ventas
-vlan 28
-name distribucion
 exit
 
 hostname MLSW0
@@ -160,7 +146,7 @@ exit
 interface po1
 switchport trunk encapsulation dot1q
 switchport mode trunk
-switchport trunk allowed vlan 68,18,28
+switchport trunk allowed vlan 68,18
 exit
 
 interface fa0/3
@@ -260,8 +246,6 @@ no ip domain lookup
 
 vlan 68
 name corporativo
-vlan 18
-name ventas
 vlan 28
 name distribucion
 exit
@@ -276,7 +260,7 @@ exit
 interface po3
 switchport trunk encapsulation dot1q
 switchport mode trunk
-switchport trunk allowed vlan 68,18,28
+switchport trunk allowed vlan 68,28
 exit
 
 interface fa0/3
