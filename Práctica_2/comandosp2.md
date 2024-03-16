@@ -21,6 +21,9 @@ Redes de computadoras 2
 | VLAN C    |     28      |
 
 
+CORPORATIVO68
+VENTAS18
+DISTRIBUCION28
 
 # DIRECCION IP PC
 
@@ -34,16 +37,9 @@ Redes de computadoras 2
 | RRHH    | 192.168.68.4    | 255.255.255.0   |
 
 
+# SW0
 
-#VLANS 
-
-CORPORATIVO68
-VENTAS18
-DISTRIBUCION28
-
-
-#SW0
-
+```
 enable
 configure terminal
 no ip domain lookup
@@ -72,13 +68,13 @@ exit
 do write
 end
 
+```
 
 
-
-#SW1
-
+# SW1
 
 
+```
 enable
 configure terminal
 no ip domain lookup
@@ -107,12 +103,12 @@ exit
 do write
 end
 
+```
 
 
+# SW2
 
-#SW2
-
-
+```
 enable
 configure terminal
 no ip domain lookup
@@ -142,11 +138,11 @@ do write
 end
 
 
+```
 
+# MLSW1
 
-#MLSW0
-
-
+```
 enable
 configure terminal
 no ip domain lookup
@@ -190,10 +186,10 @@ exit
 do write
 end
 
+```
 
-
-#MLSW1
-
+# MLSW4
+```
 enable
 configure terminal
 no ip domain lookup
@@ -253,13 +249,13 @@ do write
 end
 
 
+```
 
 
-
-#MLSW2
-
+# MLSW7
 
 
+```
 
 enable
 configure terminal
@@ -303,4 +299,5 @@ exit
 
 do write
 end
-
+```
+```
