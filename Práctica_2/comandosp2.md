@@ -1,17 +1,38 @@
-# IP DE LAS PC
+Universidad de San Carlos de Guetamala  
+Facultad de Ingenieria  
+Escuela de Ciencias y Sistemas  
+Redes de computadoras 2  
 
-! PC0
-ip address 192.168.68.10
-! PC1
-ip address 192.168.68.20
-! PC2
-ip address 192.168.68.30
-! PC3
-ip address 192.168.88.10
-! PC4
-ip address 192.168.88.20
-! PC5
-ip address 192.168.78.10
+| Nombre    | Carnet   |
+| --------- | -------- |
+| Esdras Toc     | 201807373 |
+| Brian Erazo    | 201807253 |
+| Brayan Mejia   | 201900576 |
+
+
+# Tipologia
+![Topologia](Capturas/Topologia.jpg)
+
+# VLANS
+| VLAN | NUMERO  |
+| --------- | --------- |
+| VLAN A    |   68        |
+| VLAN B    |     18      |
+| VLAN C    |     28      |
+
+
+
+# DIRECCION IP PC
+
+| Departamento | Direccion IP | Mascara |
+| --------- | --------- | --------- |
+| CORPORATIVO    | 192.168.88.3    | 255.255.255.0    |
+| CORPORATIVO    | 192.168.88.2    | 255.255.255.0    |
+| SOPORTE    | 192.168.78.2    | 255.255.255.0    |
+| RRHH    | 192.168.68.2    | 255.255.255.0    |
+| RRHH   | 192.168.68.3    | 255.255.255.0   |
+| RRHH    | 192.168.68.4    | 255.255.255.0   |
+
 
 
 #VLANS 
