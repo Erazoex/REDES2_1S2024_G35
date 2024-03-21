@@ -70,76 +70,6 @@ end
 
 ```
 
-
-# SW2
-
-
-```
-enable
-configure terminal
-no ip domain lookup
-hostname SW2
-
-vlan 68
-name corporativo
-exit
-
-interface fa0/1
-no shutdown
-switchport mode access
-switchport access vlan 68
-exit
-
-interface range fa0/2-3
-no shutdown
-channel-group 2 mode passive
-exit
-
-interface po2
-switchport mode trunk
-switchport trunk allowed vlan 68
-exit
-
-do write
-end
-
-```
-
-
-# SW3
-
-```
-enable
-configure terminal
-no ip domain lookup
-hostname SW3
-
-vlan 68
-name corporativo
-exit
-
-interface range fa0/1-2
-no shutdown
-switchport mode access
-switchport access vlan 68
-exit
-
-interface range fa0/3-4
-no shutdown
-channel-group 3 mode passive
-exit
-
-interface po3
-switchport mode trunk
-switchport trunk allowed vlan 68
-exit
-
-do write
-end
-
-
-```
-
 # MSW1
 
 ```
@@ -187,6 +117,40 @@ do write
 end
 
 ```
+# SW2
+
+
+```
+enable
+configure terminal
+no ip domain lookup
+hostname SW2
+
+vlan 68
+name corporativo
+exit
+
+interface fa0/1
+no shutdown
+switchport mode access
+switchport access vlan 68
+exit
+
+interface range fa0/2-3
+no shutdown
+channel-group 2 mode passive
+exit
+
+interface po2
+switchport mode trunk
+switchport trunk allowed vlan 68
+exit
+
+do write
+end
+
+```
+
 
 # MSW4
 ```
@@ -250,6 +214,42 @@ end
 
 
 ```
+
+
+# SW3
+
+```
+enable
+configure terminal
+no ip domain lookup
+hostname SW3
+
+vlan 68
+name corporativo
+exit
+
+interface range fa0/1-2
+no shutdown
+switchport mode access
+switchport access vlan 68
+exit
+
+interface range fa0/3-4
+no shutdown
+channel-group 3 mode passive
+exit
+
+interface po3
+switchport mode trunk
+switchport trunk allowed vlan 68
+exit
+
+do write
+end
+
+
+```
+
 
 
 # MSW7
